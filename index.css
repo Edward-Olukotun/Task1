@@ -6,7 +6,7 @@ body {
   margin: auto;
   margin-top: 50%;
   width: 95%;
-  height: 300px;
+  height: 350px;
   background: white;
   border-radius: 20px;
   box-shadow: 5px;
@@ -42,7 +42,16 @@ header {
   font-family: "Times New Roman", Times, serif;
   font-size: x-large;
 }
-
+[data-testid="githubURL"] {
+  display: flex;
+  justify-content: center;
+}
+#github {
+  height: 55px;
+  width: 55px;
+  align-self: center;
+  border-radius: 10px;
+}
 footer {
   display: flex;
   flex-direction: column;
