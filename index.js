@@ -13,18 +13,18 @@ function setDate() {
     let dayName = weekDays[today.getDay()];
     let day = today.getDate()
     // let currentDay = `Date: ${dayName} , ${day}  - ${month} - ${year}`;
-    let currentDay = `Day: ${dayName} `;
+    let currentDay = ` ${dayName} `;
     return currentDay;
 }
 
 
 function setTime() {
     let time = new Date();
-    let hour = addZero(time.getUTCHours());
-    let minute = addZero(time.getUTCMinutes());
-    let second = addZero(time.getUTCSeconds());
-    let millisecond = addZero(time.getMilliseconds());
-    let currentTime = `Time: ${hour}:${minute}:${second}:${millisecond}`;
+    let hour = addZero(time.getUTCHours() * 3600000);
+    let minute = addZero(time.getUTCMinutes() * 60000);
+    let second = addZero(time.getUTCSeconds() * 1000);
+    let millisecond = addZero(time.getUTCMilliseconds());
+    let currentTime = hour + minute + second + millisecond
     return currentTime;
 
 }
@@ -36,4 +36,4 @@ function addZero(num) {
 setInterval((date) => {
     weekDay.innerHTML = setDate();
     currentUTCTime.innerHTML = setTime();
-}, 500)
+}, 100)
