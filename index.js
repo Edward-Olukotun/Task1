@@ -8,11 +8,12 @@ const months = ["January", "February", "March", "April", "May", "June", "July",
 function setDate() {
 
     let today = new Date();
-    let month = months[today.getMonth()];
-    let year = today.getFullYear();
+    // let month = months[today.getMonth()];
+    // let year = today.getFullYear();
     let dayName = weekDays[today.getDay()];
     let day = today.getDate()
-    let currentDay = `Date: ${dayName} , ${day}  - ${month} - ${year}`;
+    // let currentDay = `Date: ${dayName} , ${day}  - ${month} - ${year}`;
+    let currentDay = `Day: ${dayName} `;
     return currentDay;
 }
 
@@ -22,7 +23,8 @@ function setTime() {
     let hour = addZero(time.getUTCHours());
     let minute = addZero(time.getUTCMinutes());
     let second = addZero(time.getUTCSeconds());
-    let currentTime = `Time: ${hour}:${minute}:${second}`;
+    let millisecond = addZero(time.getMilliseconds());
+    let currentTime = `Time: ${hour}:${minute}:${second}:${millisecond}`;
     return currentTime;
 
 }
